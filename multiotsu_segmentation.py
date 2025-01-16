@@ -46,6 +46,7 @@ class ImageProcessor:
         return props[0].bbox if props else None
     
     def get_bounding_box(self, surface_mask):
+        """"Calculates the bounding box of a specified connected component."""
         props = regionprops(surface_mask.astype(int))
         return props[0].bbox if props else None
 
